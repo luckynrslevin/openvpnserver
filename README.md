@@ -102,7 +102,7 @@ I can't help a lot in this tutorial, since this very much depends on your router
 ### Step 7 - Create OpenVPN client configurations
 4) Create a client configuration including all necessary certificates
 ```sh
-./Client -c <hostname>
+./Client -c clientname -d myname.mydyndnsprovider.com
 ```
 For more options of the Client script (get, remove, ...) use:
 ```sh
