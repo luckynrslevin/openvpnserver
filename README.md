@@ -85,7 +85,7 @@ Again, this takes some time, but afterwards everything is setup with the latest 
 
 If you have a monitor attached you can watch the progress. If not, you have to wait approx. 30 minutes (this very much depends on your internet bandwidth, since we will download all the raspbian packages). Afterwards you should be able to ssh to your raspberry pi:
 ```sh
-ssh dock@pi
+ssh dock@homevpn
 ```
 If something goes wrong all LEDs of the Raspberry PI are blinking SOS · · · − − − · · · .
 See the logfile for details: https://github.com/FooDeas/raspberrypi-ua-netinst#logging.
