@@ -61,6 +61,8 @@ Enter pass phrase for /etc/openvpn/pki/private/ca.key:
 ```
 Maybe you get asked for the sudo password again, if the certificate generation took too long.
 
+ATTENTION: Remember the passwords for the *vpn* and the *root* user that are shown on your terminal. These passwords are generated for your installation only. If you like, you can change them later on by logging into your server via ssh and the issue the passwd command.
+
 Step 2 finished - You created the server certificates, congratulations. Have you ever tried this before manually? How long did it take you to figure out the settings? If you never tried it I tell you, you saved a lot of time now, but you are not aware :-). Send your appreciations to the person who has created this perfect docker image (see References below).
 
 ### Step 3 - Download raspberrypi-ua-netinst image
@@ -85,7 +87,7 @@ Again, this takes some time, but afterwards everything is setup with the latest 
 
 If you have a monitor attached you can watch the progress. If not, you have to wait approx. 30 minutes (this very much depends on your internet bandwidth, since we will download all the raspbian packages). Afterwards you should be able to ssh to your raspberry pi:
 ```sh
-ssh dock@homevpn
+ssh vpn@homevpn
 ```
 If something goes wrong all LEDs of the Raspberry PI are blinking SOS · · · − − − · · · .
 See the logfile for details: https://github.com/FooDeas/raspberrypi-ua-netinst#logging.
