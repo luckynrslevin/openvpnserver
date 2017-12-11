@@ -7,6 +7,8 @@ These are the main design goals:
 - Automatic installation of the RasperryPI, that can be reproduced at any time, with little effort.
 - Immediate automatic updates of the operating system (e.g. Security updates) (Currently Work In Progress)
 
+![Image of OpenVPN HomeServer](https://github.com/luckynrslevin/openvpnserver/OpenVPN-Homeserver.png)
+
 ## Prerequisite
 - Some IT skills
     - know how to issue shell commands.
@@ -40,7 +42,7 @@ The script will check if docker is installed and available, if not it will give 
 If everything is working fine, you should see the following command prompt, where you have to type in a long and secure password and repeat it. The PEM pass phrase is your central key to all certificates you will generate. It has to be secure, so make sure you use a long and complex password. It is something like the key to your flat or house. You will need it later on to generate the server and client certificate, so make sure you can remember it.
 ```sh
 ...
-Enter PEM pass phrase: 
+Enter PEM pass phrase:
 Verifying - Enter PEM pass phrase:
 ...
 ```
