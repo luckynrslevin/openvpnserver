@@ -36,7 +36,7 @@ cd openvpnserver
 
 ### Step 2 - Configure the certificates for the OpenVPN server
 ```sh
-./InitCAandCreateServerKeys.sh  -d myname.mydyndnsprovider.com -i 192.168.0.1  -e foo.bar@foo.bar.com -s smtp.foo.bar.com:587 -p verysecret
+./1-InitCAandCreateServerKeys.sh  -d myname.mydyndnsprovider.com -i 192.168.0.1  -e foo.bar@foo.bar.com -s smtp.foo.bar.com:587 -p verysecret
 ```
 Follow the instructions (e.g. if you are not root, you can use sudo and have to provide your sudo password.)
 
@@ -72,7 +72,7 @@ Step 2 finished - You created the server certificates, congratulations. Have you
 
 ### Step 3 - Download raspberrypi-ua-netinst image
 ```sh
-./DownloadIMG.sh
+./2-DownloadIMG.sh
 ```
 Follow the instructions on the screen, you have to copy the image to the SD-CARD.
 I recommend to use etcher (https://etcher.io/) for this.
@@ -83,7 +83,7 @@ Your SD-CARD has to be plugged-in to your mac and be mounted. In Finder you shou
 
 Now copy the configuration to the SD-CARD:
 ```sh
-./CopyConfiguration2SDCard.sh
+./3-CopyConfiguration2SDCard.sh
 ```
 ### Step 5 - Start your RaspberryPi and go for lunch
 Now unplug the SD-CARD from your mac, plug it into the RaspberryPi and power on you RaspberryPi. The fully-automatic installation will start. Since it will download the latest raspbian packages this will take some time. But it will not only download the latest raspbian packages, it will also completely configure your OpenVPN server. After this you should have a fully functional Open VPN Server in your home network! Congratulations!
@@ -107,7 +107,7 @@ I can't help a lot in this tutorial, since this very much depends on your router
 ### Step 7 - Create OpenVPN client configurations
 4) Create a client configuration including all necessary certificates
 ```sh
-./Client -c clientname -d myname.mydyndnsprovider.com
+./4-Client -c clientname -d myname.mydyndnsprovider.com
 ```
 For more options of the Client script (get, remove, ...) use:
 ```sh
