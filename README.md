@@ -7,7 +7,7 @@ These are the main design goals:
 - Automatic installation of the RasperryPI, that can be reproduced at any time, with little effort.
 - Immediate automatic updates of the operating system (e.g. Security updates) (Currently Work In Progress)
 
-![Image of OpenVPN HomeServer](https://github.com/luckynrslevin/openvpnserver/OpenVPN-Homeserver.png)
+![Image of OpenVPN HomeServer](https://raw.githubusercontent.com/luckynrslevin/openvpnserver/master/OpenVPN-Homeserver.png)
 
 ## Prerequisite
 - Some IT skills
