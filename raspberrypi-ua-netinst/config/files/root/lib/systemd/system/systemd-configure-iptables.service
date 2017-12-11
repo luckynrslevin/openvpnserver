@@ -1,0 +1,10 @@
+[Unit]
+Description=Configure iptables once
+After=network.target
+
+[Service]
+Type=oneshot
+ExecStart=/usr/sbin/ovpn_setup_iptables.sh
+
+[Install]
+WantedBy=multi-user.target

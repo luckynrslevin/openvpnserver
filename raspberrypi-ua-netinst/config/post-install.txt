@@ -1,0 +1,34 @@
+
+
+# Create symbolic link to openvpn server configuration,
+# because openvpn expects it to be in /etc/openvpn/server.conf
+echo -n "Creating symbolic link for openvpn server configuration ..."
+chroot /rootfs /bin/ln -s /etc/openvpn/server/openvpn.conf /etc/openvpn/server.conf || fail
+echo "OK"
+
+
+# Create openvpn user
+echo -n "Create OpenVPN user ..."
+chroot /rootfs /usr/sbin/adduser --system --shell /usr/sbin/nologin --no-create-home openvpn || fail
+echo "OK"
+
+# Create systemd service to configure iptables
+echo -n "Creat systemd service to configure iptables ..."
+chroot /rootfs /bin/ln -s /lib/systemd/system/systemd-configure-iptables.service /etc/systemd/system/multi-user.target.wants/systemd-configure-iptables.service || fail
+echo "OK"
+
+# Install and configure package 'iptables-persistent'
+echo -n "Disable question to autosave ipv4 rules ..."
+chroot /rootfs /bin/echo "iptables-persistent iptables-persistent/autosave_v4 boolean true" | chroot /rootfs sh -c "LANG=C debconf-set-selections" || fail
+echo "OK"
+echo -n "Disable question to autosave ipv6 rules ..."
+chroot /rootfs /bin/echo "iptables-persistent iptables-persistent/autosave_v6 boolean true" | chroot /rootfs sh -c "LANG=C debconf-set-selections" || fail
+echo "OK"
+echo -n "Install iptables-persistent ..."
+chroot /rootfs sh -c "DEBIAN_FRONTEND=noninteractive; /usr/bin/apt-get install -y iptables-persistent" || fail
+echo "OK"
+
+# Install and configure exmim4
+echo -n "Configure exim4 ..."
+chroot /rootfs /usr/sbin/update-exim4.conf || fail
+echo "OK"

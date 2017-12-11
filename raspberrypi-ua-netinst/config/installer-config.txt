@@ -1,0 +1,26 @@
+# To customize the raspberrypi-unattended-installer:
+#
+# Place your settings in this file as described in the README.md or in the advanced documentation.
+
+hostname=homevpn
+boot_volume_label=HOMEVPN
+timeserver=0.europe.pool.ntp.org
+
+packages=ntp,openvpn,iptables,unattended-upgrades,apt-listchanges,exim4
+
+firmware_packages=1
+
+timezone=Europe/Berlin
+keyboard_layout=de
+system_default_locale=de_DE
+
+username=vpn
+userpw=20vpn17@home
+userperms_admin=1
+usergpu=1
+
+
+rootpw=20vpn17@home
+root_ssh_pwlogin=0
+
+gpu_mem=32
