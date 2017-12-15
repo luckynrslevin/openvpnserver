@@ -17,6 +17,7 @@ These are the main design goals:
 - A RaspberryPi Version 1 (Tested on RPI 1 B+). Others should also work, but are not tested by me.
 - A configured and active Dynamic DNS (DynDNS) service on your internet router and you know your DynDNS name.
 - The IP address of your local DNS server in your home network, which is typically the IP address of your internet router.
+- The smtp server and port of your EMail provider (Email is used to send notifications on unattended installation on raspbian security update).
 
 ## Let's go
 

@@ -73,7 +73,7 @@ else
 fi
 
 echo "!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!"
-echo " Now copy the image file $FILENAME to your SD-CARD"
+echo " Now copy the image file $FILENAME_SHORT to your SD-CARD"
 echo " ATTENTION - You will loose all existing files on the SD-CARD."
 echo " You can e.g. use etcher (https://etcher.io/) to do this."
 echo " After you are finished with etcher unplug the SD-CARD from your mac"
