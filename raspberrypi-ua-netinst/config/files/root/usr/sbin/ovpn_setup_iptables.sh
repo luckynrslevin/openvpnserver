@@ -113,6 +113,9 @@ cat <<EOF > $IP_V4_RULES
 -A OUTPUT -o $IFACE -p tcp -m state --state NEW,ESTABLISHED --dport 587 -j ACCEPT
 # Allow ntp to sync clock
 -A OUTPUT -o $IFACE -p udp -m state --state NEW,ESTABLISHED --dport 123 -j ACCEPT
+# Allow DHCP Client
+-A OUTPUT -o $IFACE -p udp --sport 1024:65535 --dport 67 -j ACCEPT
+-A OUTPUT -o $IFACE -p udp --sport 68 --dport 67 -j ACCEPT
 # Allow TUN to tunnel through the VPN
 -A INPUT -i tun0 -j ACCEPT
 -A FORWARD -i tun0 -j ACCEPT
