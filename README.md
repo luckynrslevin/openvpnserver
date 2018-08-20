@@ -5,7 +5,7 @@ This is a guide to install an OpenVPN server on a RaspberryPi in your local netw
 These are the main design goals:
 - Hide as many technical details as possible, especially on all the OpenVPN configuration details. But it will still require IT skills.
 - Automatic installation of the RaspberryPi, that can be reproduced at any time, with little effort.
-- Immediate automatic updates of the operating system (e.g. Security updates) (Currently Work In Progress)
+- Immediate automatic updates of the operating system (e.g. Security updates)
 
 ![Image of OpenVPN HomeServer](https://raw.githubusercontent.com/luckynrslevin/openvpnserver/master/OpenVPN-Homeserver.png)
 
