@@ -69,7 +69,7 @@ Maybe you get asked for the sudo password again, if the certificate generation t
 
 ATTENTION: Remember the passwords for the *vpn* and the *root* user that are shown on your terminal. These passwords are generated for your installation only. If you like, you can change them later on by logging into your server via ssh and the issue the passwd command.
 
-Step 2 finished - You created the server certificates, congratulations. Have you ever tried this before manually? How long did it take you to figure out the settings? If you never tried it I tell you, you saved a lot of time now, but you are not aware :-). Send your appreciations to the person who has created this perfect docker image (see References below).
+Step 2 finished - You created the server certificates, congratulations. Have you ever tried this manually before? How long did it take you to figure out the settings? If you never tried it I tell you, you saved a lot of time now, but you are not aware :-). Send your appreciations to the person who has created this perfect docker image (see References below).
 
 ### Step 3 - Download raspberrypi-ua-netinst image
 ```sh
