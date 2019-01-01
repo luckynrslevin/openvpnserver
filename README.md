@@ -112,7 +112,7 @@ I can't help a lot in this tutorial, since this very much depends on your router
 ```
 For more options of the Client script (get, remove, ...) use:
 ```sh
-./Client -?
+./4-Client -?
 ```
 
 On a mac you can use tunnelblick software as VPN client. You can directly load the generated <clientname>.ovpn configuration to tunnelblick.
